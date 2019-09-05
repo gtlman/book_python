@@ -1,7 +1,8 @@
 # <center>语言特点</center>
 Python是一门动态的强类型的语言
 
-## 动态/静态语言
+
+## <center>动态/静态语言</center>
 静态指的是在编译期就已经提前确定对象类型，类似JAVA，C这类
 
 动态指的是在运行期（执行到相应代码段）才确定对象类型，类似JS，Python这类
@@ -39,12 +40,14 @@ hasattr('11', '__len__')      #True, 判断对象是否有该属性
 [1] is [1]                    #False，List是可变对象，因此不是同一个对象
 ```
 
-## 强/弱类型语言
+
+## <center>强/弱类型语言</center>
 强类型不会发生隐式类型转换（JS，PHP是弱类型）
 
 `1 + '1'`在python会报错，JS会返回`'11'`)
 
-## The Zen of Python（Python之禅）
+
+## <center>The Zen of Python（Python之禅）</center>
 Tim Peters编写的关于Python的编程准则
 终端执行import this
 ```

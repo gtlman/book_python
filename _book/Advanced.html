@@ -185,7 +185,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x9AD8;&#x7EA7;&#x7279;&#x6027;"><center>&#x9AD8;&#x7EA7;&#x7279;&#x6027;</center></h1>
-<h2 id="&#x6027;&#x80FD;&#x5206;&#x6790;">&#x6027;&#x80FD;&#x5206;&#x6790;</h2>
+<h2 id="&#x6027;&#x80FD;&#x5206;&#x6790;"><center>&#x6027;&#x80FD;&#x5206;&#x6790;</center></h2>
 <h3 id="gil&#xFF08;global-interpreter-lock&#xFF09;">GIL&#xFF08;Global Interpreter Lock&#xFF09;</h3>
 <ul>
 <li>Cpython&#x89E3;&#x91CA;&#x5668;&#x7684;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x5E76;&#x4E0D;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#xFF08;&#x6211;&#x8BB0;&#x5F97;&#x8DDF;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x6709;&#x5173;&#xFF09;</li>
@@ -263,13 +263,14 @@ p.print_stats()                     #&#x8FD4;&#x56DE;&#x5206;&#x6790;&#x7ED3;&#x
 <li>&#x5F02;&#x6B65;&#xFF1A;asyncio&#xFF0C;celery</li>
 <li>&#x5E76;&#x53D1;&#xFF1A;gevent/&#x591A;&#x7EBF;&#x7A0B;</li>
 </ol>
-<h2 id="generator-&#x751F;&#x6210;&#x5668;">generator &#x751F;&#x6210;&#x5668;</h2>
+<h2 id="generator-&#x751F;&#x6210;&#x5668;"><center>generator &#x751F;&#x6210;&#x5668;</center></h2>
 <ul>
 <li>&#x751F;&#x6210;&#x5668;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x503C;&#x7684;&#x51FD;&#x6570;</li>
 <li>&#x5F53;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x91CC;&#x9762;&#x6709;&#x4E86;yield&#x5173;&#x952E;&#x5B50;&#x5C31;&#x6210;&#x4E86;&#x751F;&#x6210;&#x5668;</li>
 <li>&#x751F;&#x6210;&#x5668;&#x53EF;&#x4EE5;&#x6302;&#x8D77;&#x6267;&#x884C;&#x5E76;&#x4E14;&#x4FDD;&#x6301;&#x5F53;&#x524D;&#x6267;&#x884C;&#x72B6;&#x6001;</li>
 </ul>
-<h2 id="&#x57FA;&#x4E8E;&#x751F;&#x6210;&#x5668;&#x7684;&#x534F;&#x7A0B;">&#x57FA;&#x4E8E;&#x751F;&#x6210;&#x5668;&#x7684;&#x534F;&#x7A0B;</h2>
+<h2 id="&#x534F;&#x7A0B;"><center>&#x534F;&#x7A0B;</center></h2>
+<h3 id="&#x57FA;&#x4E8E;&#x751F;&#x6210;&#x5668;&#x7684;&#x534F;&#x7A0B;">&#x57FA;&#x4E8E;&#x751F;&#x6210;&#x5668;&#x7684;&#x534F;&#x7A0B;</h3>
 <p>&#x57FA;&#x4E8E;&#x751F;&#x6210;&#x5668;&#x589E;&#x5F3A;&#x5B9E;&#x73B0;</p>
 <ul>
 <li>&#x534F;&#x7A0B;&#x9700;&#x8981;&#x4F7F;&#x7528;send(None) &#x6216;&#x8005; next(coroutine) &#x9884;&#x6FC0; &#x542F;&#x52A8;</li>
@@ -278,7 +279,7 @@ p.print_stats()                     #&#x8FD4;&#x56DE;&#x5206;&#x6790;&#x7ED3;&#x
 <li>&#x53EF;&#x4EE5;&#x901A;&#x8FC7; coroutine.send(value)&#x6765;&#x7ED9;&#x534F;&#x7A0B;&#x53D1;&#x9001;&#x503C;&#xFF0C;&#x53D1;&#x9001;&#x7684;&#x503C;&#x4F1A;&#x8D4B;&#x503C;&#x7ED9; yield &#x8868;&#x8FBE;&#x5F0F;&#x5DE6;&#x8FB9;&#x7684;&#x53D8;&#x91CF; value = yield</li>
 <li>&#x534F;&#x7A0B;&#x6267;&#x884C;&#x5B8C;&#x540E;&#xFF08;&#x6CA1;&#x6709;&#x4E0B;&#x4E00;&#x4E2A; yield &#x8BED;&#x53E5;&#xFF09;&#x5C31;&#x4F1A;&#x629B;&#x51FA; StopIteration &#x5F02;&#x5E38;</li>
 </ul>
-<h2 id="&#x534F;&#x7A0B;&#x88C5;&#x9970;&#x5668;">&#x534F;&#x7A0B;&#x88C5;&#x9970;&#x5668;</h2>
+<h3 id="&#x534F;&#x7A0B;&#x88C5;&#x9970;&#x5668;">&#x534F;&#x7A0B;&#x88C5;&#x9970;&#x5668;</h3>
 <pre><code>from functools import wraps         #wraos&#x53EF;&#x4EE5;&#x5C06;name&#x4E4B;&#x7C7B;&#x7684;&#x90FD;&#x8FDB;&#x884C;&#x4FEE;&#x6539;
 def coroutine(func):
     @wraps(func)
@@ -287,9 +288,9 @@ def coroutine(func):
         next(gen)                   #&#x9884;&#x6FC0;&#x534F;&#x7A0B;
         return gen
     return primer
-</code></pre><h2 id="python35&#x539F;&#x751F;&#x534F;&#x7A0B;">python3.5+&#x539F;&#x751F;&#x534F;&#x7A0B;</h2>
+</code></pre><h3 id="python35&#x539F;&#x751F;&#x534F;&#x7A0B;">python3.5+&#x539F;&#x751F;&#x534F;&#x7A0B;</h3>
 <p>async/asait</p>
-<h2 id="&#x6DF1;&#x62F7;&#x8D1D;-&#x4E0E;-&#x6D45;&#x62F7;&#x8D1D;">&#x6DF1;&#x62F7;&#x8D1D; &#x4E0E; &#x6D45;&#x62F7;&#x8D1D;</h2>
+<h2 id="&#x6DF1;&#x62F7;&#x8D1D;-&#x4E0E;-&#x6D45;&#x62F7;&#x8D1D;"><center>&#x6DF1;&#x62F7;&#x8D1D; &#x4E0E; &#x6D45;&#x62F7;&#x8D1D;</center></h2>
 <p><strong>&#x6D45;&#x62F7;&#x8D1D;</strong>&#xFF1A;&#x521B;&#x5EFA;&#x65B0;&#x5BF9;&#x8C61;&#x5B8C;&#x5168;&#x62F7;&#x8D1D;&#xFF0C;&#x4E0D;&#x7BA1;&#x662F;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#x8FD8;&#x662F;&#x5185;&#x5B58;&#x5730;&#x5740;</p>
 <p><strong>&#x6DF1;&#x62F7;&#x8D1D;</strong>&#xFF1A;&#x62F7;&#x8D1D;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x6307;&#x5411;&#x7684;&#x52A8;&#x6001;&#x5206;&#x914D;&#x5185;&#x5B58;&#xFF0C;&#x5E76;&#x5BF9;&#x5B50;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x6DF1;&#x62F7;&#x8D1D;&#xFF08;&#x9012;&#x5F52;&#x64CD;&#x4F5C;&#xFF09;</p>
 <p><strong>&#x6DF1;&#x62F7;&#x8D1D; &#x7684;&#x7279;&#x70B9;</strong>&#xFF1A;&#x62F7;&#x8D1D;&#x4E4B;&#x540E;&#xFF0C;&#x5185;&#x5BB9;&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#x4F46;&#x662F;&#x5BF9;&#x4E8E;A&#x7684;&#x4FEE;&#x6539;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x5230;B&#xFF08;&#x62F7;&#x8D1D;&#x65F6;&#x6240;&#x6709;&#x7684;&#x5B50;&#x5BF9;&#x8C61;&#x90FD;&#x6EE1;&#x8DB3;&#x8BE5;&#x6761;&#x4EF6;&#xFF09;</p>
@@ -300,16 +301,17 @@ def coroutine(func):
 <p>&#x56E0;&#x4E3A;&#x6570;&#x7EC4;&#x662F;&#x53EF;&#x53D8;&#x5BF9;&#x8C61;&#xFF0C;&#x5F53;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x662F;&#x6570;&#x7EC4;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8981;&#x7559;&#x5FC3;<strong>&#x6D45;&#x62F7;&#x8D1D;</strong>&#xFF0C;&#x7559;&#x610F;&#x5143;&#x7D20;&#x662F;&#x539F;&#x6570;&#x7EC4;&#x7684;&#x5F15;&#x7528;&#x8FD8;&#x662F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6570;&#x7EC4;</p>
 <pre><code>A = [1]&#xFF0C;B=[2], C=[3], D=[A,B,C]
 A = [2] #&#x4F1A;&#x540C;&#x6B65;&#x5370;&#x8C61;&#x6570;&#x7EC4;D&#xFF0C;&#x8981;&#x7559;&#x610F;&#x8FD9;&#x662F;&#x4E0D;&#x662F;&#x4F60;&#x60F3;&#x8981;&#x7684;
-</code></pre><h2 id="&#x5143;&#x7C7B;">&#x5143;&#x7C7B;</h2>
+</code></pre><h2 id="&#x7C7B;"><center>&#x7C7B;</center></h2>
+<h3 id="&#x5143;&#x7C7B;">&#x5143;&#x7C7B;</h3>
 <p>&#x4E00;&#x5207;&#x7686;&#x5BF9;&#x8C61;&#xFF0C;&#x7C7B;&#x4E5F;&#x662F;&#x5BF9;&#x8C61;</p>
 <p>&#x7C7B;&#x662F;&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;&#x7684;&#x6A21;&#x677F;</p>
 <p>&#x5143;&#x7C7B;&#x662F;&#x521B;&#x5EFA;&#x7C7B;&#x7684;&#x6A21;&#x677F;</p>
 <p>type&#x662F;&#x6240;&#x6709;&#x7C7B;&#x7684;&#x5143;&#x7C7B;&#xFF08;&#x5305;&#x62EC;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x7EE7;&#x627F;&#x81EA;type&#x7684;&#x5143;&#x7C7B;&#xFF09;</p>
-<h2 id="new&#x548C;init&#xFF0C;metaclass"><strong>new</strong>&#x548C;<strong>init</strong>&#xFF0C;<strong>metaclass</strong></h2>
+<h3 id="new&#x548C;init&#xFF0C;metaclass"><strong>new</strong>&#x548C;<strong>init</strong>&#xFF0C;<strong>metaclass</strong></h3>
 <p><strong>new</strong>&#x65B9;&#x6CD5;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x521B;&#x5EFA;&#x7684;&#x5B9E;&#x4F8B;,&#x800C;<strong>init</strong>&#x4EC0;&#x4E48;&#x90FD;&#x4E0D;&#x8FD4;&#x56DE;.</p>
 <p>&#x5F53;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x5B9E;&#x4F8B;&#x65F6;&#x8C03;&#x7528;<strong>new</strong>,&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x65F6;&#x7528;<strong>init</strong>.</p>
 <p><code>_metaclass__</code>&#x662F;&#x521B;&#x5EFA;&#x7C7B;&#x65F6;&#x8D77;&#x4F5C;&#x7528;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5206;&#x522B;&#x4F7F;&#x7528;<code>__metaclass__, __new__&#x548C;__init__</code>&#x6765;&#x5206;&#x522B;&#x5728;&#x7C7B;&#x521B;&#x5EFA;,&#x5B9E;&#x4F8B;&#x521B;&#x5EFA;&#x548C;&#x5B9E;&#x4F8B;&#x521D;&#x59CB;&#x5316;&#x7684;&#x65F6;&#x5019;&#x505A;&#x4E00;&#x4E9B;&#x4FEE;&#x6539;&#xFF0C;&#x6700;&#x5E38;&#x7528;&#x5728;ORM&#x8FD9;&#x79CD;&#x590D;&#x6742;&#x7684;&#x4E1C;&#x897F;&#x4E0A;</p>
-<h2 id="python&#x5783;&#x573E;&#x56DE;&#x6536;">python&#x5783;&#x573E;&#x56DE;&#x6536;</h2>
+<h2 id="python&#x5783;&#x573E;&#x56DE;&#x6536;"><center>python&#x5783;&#x573E;&#x56DE;&#x6536;</center></h2>
 <h3 id="reference-counting-&#x5F15;&#x7528;&#x8BA1;&#x6570;">reference counting &#x5F15;&#x7528;&#x8BA1;&#x6570;</h3>
 <ol>
 <li>Python&#x4E00;&#x5207;&#x7686;&#x5BF9;&#x8C61;</li>
@@ -332,7 +334,7 @@ b.append(a)
 <p>&#x65E0;&#x7A7A;&#x4F59;&#x5185;&#x5B58;&#x65F6;&#xFF0C;&#x4ECE;&#x5BC4;&#x5B58;&#x5668;&#x548C;&#x7A0B;&#x5E8F;&#x6808;&#x4E0A;&#x7684;&#x5F15;&#x7528;&#x89E6;&#x53D1;&#xFF0C;&#x904D;&#x5386;&#x4EE5;&#x5BF9;&#x8C61;&#x4E3A;&#x8282;&#x70B9;&#xFF0C;&#x4EE5;&#x5F15;&#x7528;&#x4E3A;&#x8FB9;&#x6784;&#x6210;&#x7684;&#x56FE;&#xFF0C;&#x628A;&#x6240;&#x6709;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x7684;&#x5BF9;&#x8C61;&#x6253;&#x4E0A;&#x6807;&#x8BB0;&#xFF0C;&#x7136;&#x540E;&#x6E05;&#x626B;&#x4E00;&#x904D;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#xFF0C;&#x628A;&#x6240;&#x6709;&#x6CA1;&#x6807;&#x8BB0;&#x7684;&#x5BF9;&#x8C61;&#x91CA;&#x653E;</p>
 <h3 id="&#x5206;&#x4EE3;&#x6280;&#x672F;">&#x5206;&#x4EE3;&#x6280;&#x672F;</h3>
 <p>&#x6839;&#x636E;&#x5B58;&#x6D3B;&#x65F6;&#x95F4;&#x5206;&#x4EE3;&#xFF0C;&#x5B58;&#x6D3B;&#x65F6;&#x95F4;&#x8D8A;&#x957F;&#x7684;&#x4EE3;&#xFF0C;&#x6267;&#x884C;&#x5783;&#x573E;&#x56DE;&#x6536;&#x7684;&#x9891;&#x7387;&#x5C31;&#x8D8A;&#x4F4E;&#xFF08;&#x5F88;&#x4E45;&#x624D;&#x53BB;&#x6536;&#x4E00;&#x6B21;&#x5783;&#x573E;&#xFF09;</p>
-<h2 id="&#x5355;&#x4F8B;&#x6A21;&#x5F0F;">&#x5355;&#x4F8B;&#x6A21;&#x5F0F;</h2>
+<h2 id="&#x5355;&#x4F8B;&#x6A21;&#x5F0F;"><center>&#x5355;&#x4F8B;&#x6A21;&#x5F0F;</center></h2>
 <p>&#x662F;&#x4E00;&#x79CD;&#x5E38;&#x7528;&#x7684;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#xFF0C;&#x901A;&#x8FC7;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x7CFB;&#x7EDF;&#x4E2D;&#x4E00;&#x4E2A;&#x7C7B;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x800C;&#x4E14;&#x8BE5;&#x5B9E;&#x4F8B;&#x6613;&#x4E8E;&#x5916;&#x754C;&#x8BBF;&#x95EE;</p>
 <p>&#x8BB8;&#x591A;&#x65F6;&#x5019;&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#x53EA;&#x9700;&#x8981;&#x62E5;&#x6709;&#x4E00;&#x4E2A;&#x7684;&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x6837;&#x6709;&#x5229;&#x4E8E;&#x6211;&#x4EEC;&#x534F;&#x8C03;&#x7CFB;&#x7EDF;&#x6574;&#x4F53;&#x7684;&#x884C;&#x4E3A;&#x3002;&#x6BD4;&#x5982;&#x5728;&#x67D0;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x8BE5;&#x670D;&#x52A1;&#x5668;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x5B58;&#x653E;&#x5728;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x8FD9;&#x4E9B;&#x914D;&#x7F6E;&#x6570;&#x636E;&#x7531;&#x4E00;&#x4E2A;&#x5355;&#x4F8B;&#x5BF9;&#x8C61;&#x7EDF;&#x4E00;&#x8BFB;&#x53D6;&#xFF0C;&#x7136;&#x540E;&#x670D;&#x52A1;&#x8FDB;&#x7A0B;&#x4E2D;&#x7684;&#x5176;&#x4ED6;&#x5BF9;&#x8C61;&#x518D;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x5355;&#x4F8B;&#x5BF9;&#x8C61;&#x83B7;&#x53D6;&#x8FD9;&#x4E9B;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x3002;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x7B80;&#x5316;&#x4E86;&#x5728;&#x590D;&#x6742;&#x73AF;&#x5883;&#x4E0B;&#x7684;&#x914D;&#x7F6E;&#x7BA1;&#x7406;&#x3002;</p>
 <p>&#x5B9E;&#x73B0;&#x5BF9;&#x8C61;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x7684;&#x601D;&#x8DEF;&#x662F;&#xFF1A;</p>
@@ -409,7 +411,7 @@ my_singleton.foo()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"高级特性","level":"1.4","depth":1,"previous":{"title":"基础","level":"1.3","depth":1,"path":"Basic.md","ref":"Basic.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Advanced.md","mtime":"2019-09-05T08:07:42.680Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-05T08:20:28.778Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"高级特性","level":"1.4","depth":1,"previous":{"title":"基础","level":"1.3","depth":1,"path":"Basic.md","ref":"Basic.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Advanced.md","mtime":"2019-09-05T13:05:08.504Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-05T13:09:36.605Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

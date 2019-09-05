@@ -12,11 +12,14 @@ b = [1, 2, 3]
 {k: v for k, v in zip(a, b)}            #返回{'a': 1, 'b': 2}
 ```
 
-## 函数
+## <center>对象类型</center>
 ### 不可变对象
 None, int, float, str, Bool, tuple, frozenset都是不可变对象
 ### 可变对象
 list，set，dict，和其它不可变对象都是可变对象
+
+
+## <center>函数</center>
 ### 参数传递
 参数传递对象的**引用**(可以联想一下引用计数)
 
@@ -64,7 +67,8 @@ d = pkwargs(a=1,b=2,c=3,d=4)   #返回{'a': 1, 'b': 2, 'c': 3, 'd': 4}
 pkwargs(**d)                   #返回{'a': 1, 'b': 2, 'c': 3, 'd': 4}
 ```
 
-## 异常
+
+## <center>异常</center>
 python中所有异常均继承于BaseException
 ### 内置异常
 SystemExit          #sys.exit()会抛出该异常，python解释器捕获之后就会退出程序
@@ -95,7 +99,8 @@ finally:
 
 raise MyException()抛出异常
 
-## unit testing 单元测试
+
+## <center>unit testing 单元测试</center>
 - 针对一个函数， 一个类这样的小单元进行正确性校验
 - 从而实现自底向上保证程序的正确性
 
@@ -214,7 +219,8 @@ class unittest.mock.Mock(spec=None, side_effect=None, return_value=DEFAULT, wrap
 ## python中的作用域
 本地作用域（Local）→当前作用域被嵌入的本地作用域（Enclosing locals）→全局/模块作用域（Global）→内置作用域（Built-in）
 
-## closure 闭包
+
+## <center>closure 闭包</center>
 1. 必须有一个内嵌函数
 2. 内嵌函数必须引用外部函数的变量
 3. 外部函数的返回值必须是内嵌函数
@@ -223,7 +229,8 @@ class unittest.mock.Mock(spec=None, side_effect=None, return_value=DEFAULT, wrap
 
 因此在结束函数前应将用不上的变量删除以节省内存
 
-## lambda 函数
+
+## <center>lambda 函数</center>
 匿名函数：`f = lambda x，y : x + y + 1`，前面表示传入的参数，后面表示函数逻辑
 
 ## 函数式编程
@@ -246,7 +253,9 @@ print(list(a))   #返回[2, 4, 6]
 #  reduce(func, iter)：reduce函数是对一个迭代体的每个项迭代调用函数，下面是求3的阶乘：
 reduce(lambda x,y:x*y,range(1,4))   #返回6
 ```
-##类
+
+
+## <center>类</center>
 ### 类方法
 ```
 class A(object):
@@ -278,7 +287,8 @@ b = A('b')
 
 上面的num就属于类A的属性，不过所有A的实例a，b都能访问到（这个应该跟作用域链有关），但是只有类A本身具有修改权限
 
-## 字符串格式化 % and .format
+
+## <center>字符串格式化 % and .format</center>
 ```
 #!/usr/bin/python
 sub1 = "python string!"
@@ -291,7 +301,8 @@ c = "with %(kwarg)s!" % {'kwarg':sub2}  # "with an arg!"
 d = "with {kwarg}!".format(kwarg=sub2)  # "with an arg!"
 ```
 
-## 装饰器
+
+## <center>装饰器</center>
 不改变原有方法的代码，在原有方法的基础上添加功能，就像佩戴装饰品一样的实现称为**装饰器**
 
 关键字@能在方法对象外部添加**装饰器**
@@ -313,13 +324,13 @@ def function()
 
 中间的`@functools.wraps(function)`给返回的新方法对象绑定原有方法对象的名称属性
 
-## 内置数据结构
 
-## 一般序列操作
+## <center>内置数据结构</center>
+### 一般序列操作
 大多数序列类型包括可改变序列（例如列表）和不可改变序列（元组）都支持以下操作
 **[一般序列操作官方中文文档](https://docs.python.org/zh-cn/3/library/stdtypes.html#typesseq-common "一般序列操作官方中文文档")**
 
-## 可变序列操作
+### 可变序列操作
 可变序列可以实现的一些操作
 **[可变序列操作官方中文文档](https://docs.python.org/zh-cn/3/library/stdtypes.html#typesseq-mutable "可变序列操作官方中文文档")**
 

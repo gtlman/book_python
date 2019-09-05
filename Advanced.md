@@ -1,6 +1,6 @@
 # <center>高级特性</center>
 
-## 性能分析
+## <center>性能分析</center>
 ### GIL（Global Interpreter Lock）
 - Cpython解释器的内存管理并不是线程安全的（我记得跟引用计数有关）
 - 保护多线程下对Python对象的访问
@@ -101,12 +101,14 @@ p.print_stats()                     #返回分析结果
 5. 异步：asyncio，celery
 6. 并发：gevent/多线程
 
-## generator 生成器
+## <center>generator 生成器</center>
 - 生成器就是可以生成值的函数
 - 当一个函数里面有了yield关键子就成了生成器
 - 生成器可以挂起执行并且保持当前执行状态
 
-## 基于生成器的协程
+
+## <center>协程</center>
+### 基于生成器的协程
 基于生成器增强实现
 - 协程需要使用send(None) 或者 next(coroutine) 预激 启动
 - 在 yield 处协程会暂时执行
@@ -114,7 +116,7 @@ p.print_stats()                     #返回分析结果
 - 可以通过 coroutine.send(value)来给协程发送值，发送的值会赋值给 yield 表达式左边的变量 value = yield
 - 协程执行完后（没有下一个 yield 语句）就会抛出 StopIteration 异常
 
-## 协程装饰器
+### 协程装饰器
 ```
 from functools import wraps         #wraos可以将name之类的都进行修改
 def coroutine(func):
@@ -126,10 +128,10 @@ def coroutine(func):
     return primer
 ```
 
-## python3.5+原生协程
+### python3.5+原生协程
 async/asait
 
-## 深拷贝 与 浅拷贝
+## <center>深拷贝 与 浅拷贝
 **浅拷贝**：创建新对象完全拷贝，不管是基本类型还是内存地址
 
 **深拷贝**：拷贝所有属性指向的动态分配内存，并对子对象进行深拷贝（递归操作）
@@ -149,7 +151,9 @@ async/asait
 A = [1]，B=[2], C=[3], D=[A,B,C]
 A = [2] #会同步印象数组D，要留意这是不是你想要的
 ```
-## 元类
+
+## <center>类</center>
+### 元类
 一切皆对象，类也是对象
 
 类是创建实例的模板
@@ -158,14 +162,15 @@ A = [2] #会同步印象数组D，要留意这是不是你想要的
 
 type是所有类的元类（包括自定义的继承自type的元类）
 
-## __new__和__init__，__metaclass__
+### __new__和__init__，__metaclass__
 __new__方法会返回一个创建的实例,而__init__什么都不返回.
 
 当创建一个新实例时调用__new__,初始化一个实例时用__init__.
 
 `_metaclass__`是创建类时起作用，所以我们可以分别使用`__metaclass__, __new__和__init__`来分别在类创建,实例创建和实例初始化的时候做一些修改，最常用在ORM这种复杂的东西上
 
-## python垃圾回收
+
+## <center>python垃圾回收
 ### reference counting 引用计数
 1. Python一切皆对象
 2. 每一个对象都有一个ob_refcnt的属性来表示该对象的引用数->引用计数器
@@ -192,7 +197,7 @@ b.append(a)
 ### 分代技术
 根据存活时间分代，存活时间越长的代，执行垃圾回收的频率就越低（很久才去收一次垃圾）
 
-## 单例模式
+## <center>单例模式</center>
 是一种常用的设计模式，通过单例模式可以保证系统中一个类只有一个实例而且该实例易于外界访问
 
 许多时候整个系统只需要拥有一个的全局对象，这样有利于我们协调系统整体的行为。比如在某个服务器程序中，该服务器的配置信息存放在一个文件中，这些配置数据由一个单例对象统一读取，然后服务进程中的其他对象再通过这个单例对象获取这些配置信息。这种方式简化了在复杂环境下的配置管理。
