@@ -1,0 +1,641 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>基础 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Advanced.html" />
+    
+    
+    <link rel="prev" href="Characteristic.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Characteristic.html">
+            
+                <a href="Characteristic.html">
+            
+                    
+                    语言特点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="Basic.html">
+            
+                <a href="Basic.html">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Advanced.html">
+            
+                <a href="Advanced.html">
+            
+                    
+                    高级特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >基础</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x57FA;&#x7840;"><center>&#x57FA;&#x7840;</center></h1>
+<h2 id="&#x8BED;&#x6CD5;&#x7CD6;">&#x8BED;&#x6CD5;&#x7CD6;</h2>
+<h3 id="&#x5217;&#x8868;&#xFF0C;&#x96C6;&#x5408;-&#x548C;-&#x5B57;&#x5178;&#x63A8;&#x5BFC;">&#x5217;&#x8868;&#xFF0C;&#x96C6;&#x5408; &#x548C; &#x5B57;&#x5178;&#x63A8;&#x5BFC;</h3>
+<pre><code>[i for i in range(10) if i % 2 == 0]    #&#x8FD4;&#x56DE;[0, 2, 4, 6, 8]
+(i for i in range(10) if i % 2 == 0)    #&#x8FD4;&#x56DE;&#x751F;&#x6210;&#x5668;&lt;generator object &lt;genexpr&gt; at 0x000001E9FD6192A0&gt;
+{i*i for i in range(10) if i % 2 == 0}    #&#x8FD4;&#x56DE;&#x96C6;&#x5408;{0, 64, 4, 36, 16}
+
+a = [&apos;a&apos;, &apos;b&apos;]
+b = [1, 2, 3]
+{k: v for k, v in zip(a, b)}            #&#x8FD4;&#x56DE;{&apos;a&apos;: 1, &apos;b&apos;: 2}
+</code></pre><h2 id="&#x51FD;&#x6570;">&#x51FD;&#x6570;</h2>
+<h3 id="&#x4E0D;&#x53EF;&#x53D8;&#x5BF9;&#x8C61;">&#x4E0D;&#x53EF;&#x53D8;&#x5BF9;&#x8C61;</h3>
+<p>None, int, float, str, Bool, tuple, frozenset&#x90FD;&#x662F;&#x4E0D;&#x53EF;&#x53D8;&#x5BF9;&#x8C61;</p>
+<h3 id="&#x53EF;&#x53D8;&#x5BF9;&#x8C61;">&#x53EF;&#x53D8;&#x5BF9;&#x8C61;</h3>
+<p>list&#xFF0C;set&#xFF0C;dict&#xFF0C;&#x548C;&#x5176;&#x5B83;&#x4E0D;&#x53EF;&#x53D8;&#x5BF9;&#x8C61;&#x90FD;&#x662F;&#x53EF;&#x53D8;&#x5BF9;&#x8C61;</p>
+<h3 id="&#x53C2;&#x6570;&#x4F20;&#x9012;">&#x53C2;&#x6570;&#x4F20;&#x9012;</h3>
+<p>&#x53C2;&#x6570;&#x4F20;&#x9012;&#x5BF9;&#x8C61;&#x7684;<strong>&#x5F15;&#x7528;</strong>(&#x53EF;&#x4EE5;&#x8054;&#x60F3;&#x4E00;&#x4E0B;&#x5F15;&#x7528;&#x8BA1;&#x6570;)</p>
+<p>&#x5BF9;&#x8C61;&#x662F;&#x53EF;&#x53D8;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x5BF9;&#x53EF;&#x53D8;&#x5BF9;&#x8C61;&#x7684;&#x6539;&#x53D8;&#x4F1A;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x5BF9;&#x8C61;&#x5185;&#x5B58;</p>
+<p>&#x5BF9;&#x8C61;&#x662F;&#x4E0D;&#x53EF;&#x53D8;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x5BF9;&#x4E0D;&#x53EF;&#x53D8;&#x5BF9;&#x8C61;&#x7684;&#x6539;&#x53D8;&#x4F1A;&#x91CD;&#x65B0;&#x7533;&#x8BF7;&#x4E00;&#x5757;&#x5BF9;&#x8C61;&#x5185;&#x5B58;&#x4F5C;&#x4E3A;&#x7ED3;&#x679C;</p>
+<pre><code>def clear_list(l):
+    l = []
+ll = [1,2,3]
+clear_list(ll)
+print(ll)               #&#x8FD4;&#x56DE;[1, 2, 3]
+</code></pre><h3 id="&#x53EF;&#x53D8;&#x5BF9;&#x8C61;-&#x4F5C;&#x4E3A;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;">&#x53EF;&#x53D8;&#x5BF9;&#x8C61; &#x4F5C;&#x4E3A;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;</h3>
+<pre><code>def fl(l=[1]):
+    l.append(1)
+    print(l)
+fl()            #[1, 1]
+fl()            #[1, 1, 1]
+</code></pre><p>&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x53EA;&#x4F1A;&#x8BA1;&#x7B97;&#x4E00;&#x6B21;&#xFF0C;&#x8FD9;&#x91CC;&#x8BA1;&#x7B97;&#x4E00;&#x6B21;&#x4E4B;&#x540E;&#xFF0C;&#x8D4B;&#x4E88;<code>l</code>&#x53C2;&#x6570;<code>[1]</code>&#x5BF9;&#x8C61;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;</p>
+<h3 id="arg-&#x548C;-kwargs-&#x53EF;&#x53D8;&#x53C2;&#x6570;"><code>*arg</code> &#x548C; <code>**kwargs</code> &#x53EF;&#x53D8;&#x53C2;&#x6570;</h3>
+<p>arg&#x4F1A;&#x628A;&#x53C2;&#x6570;&#x7EC4;&#x6210;&#x4E3A;&#x4E00;&#x4E2A;tuple</p>
+<pre><code>def parg(*arg):
+    print(arg)
+    return arg
+t = parg(1,2,3,4)   #&#x8FD4;&#x56DE;(1, 2, 3, 4)
+parg(*t)            #&#x8FD4;&#x56DE;(1, 2, 3, 4)
+</code></pre><p>kwargs&#x4F1A;&#x628A;&#x53C2;&#x6570;&#x7EC4;&#x5408;&#x4E3A;&#x4E00;&#x4E2A;dict</p>
+<pre><code>def pkwargs(**kwargs):
+    print(kwargs)
+    return kwargs
+d = pkwargs(a=1,b=2,c=3,d=4)   #&#x8FD4;&#x56DE;{&apos;a&apos;: 1, &apos;b&apos;: 2, &apos;c&apos;: 3, &apos;d&apos;: 4}
+pkwargs(**d)                   #&#x8FD4;&#x56DE;{&apos;a&apos;: 1, &apos;b&apos;: 2, &apos;c&apos;: 3, &apos;d&apos;: 4}
+</code></pre><h2 id="&#x5F02;&#x5E38;">&#x5F02;&#x5E38;</h2>
+<p>python&#x4E2D;&#x6240;&#x6709;&#x5F02;&#x5E38;&#x5747;&#x7EE7;&#x627F;&#x4E8E;BaseException</p>
+<h3 id="&#x5185;&#x7F6E;&#x5F02;&#x5E38;">&#x5185;&#x7F6E;&#x5F02;&#x5E38;</h3>
+<p>SystemExit          #sys.exit()&#x4F1A;&#x629B;&#x51FA;&#x8BE5;&#x5F02;&#x5E38;&#xFF0C;python&#x89E3;&#x91CA;&#x5668;&#x6355;&#x83B7;&#x4E4B;&#x540E;&#x5C31;&#x4F1A;&#x9000;&#x51FA;&#x7A0B;&#x5E8F;
+KeyboardInterrupt   #Ctrl + C
+GeneratorExit       #&#x751F;&#x6210;&#x5668;&#x9000;&#x51FA;&#x7684;&#x65F6;&#x5019;&#x629B;&#x51FA;</p>
+<h3 id="&#x5E38;&#x89C1;&#x573A;&#x666F;">&#x5E38;&#x89C1;&#x573A;&#x666F;</h3>
+<ul>
+<li>&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#xFF08;&#x8D85;&#x65F6;&#xFF0C;&#x8FDE;&#x63A5;&#x9519;&#x8BEF;&#x7B49;&#xFF09;</li>
+<li>&#x8D44;&#x6E90;&#x8BBF;&#x95EE;&#xFF08;&#x6743;&#x9650;&#x95EE;&#x9898;&#xFF0C;&#x8D44;&#x6E90;&#x4E0D;&#x5B58;&#x5728;&#xFF09;</li>
+<li>&#x4EE3;&#x7801;&#x903B;&#x8F91;&#xFF08;&#x8D8A;&#x754C;&#x8BBF;&#x95EE;&#xFF0C;KeyError&#x7B49;&#xFF09;</li>
+</ul>
+<h3 id="&#x5F02;&#x5E38;&#x5904;&#x7406;">&#x5F02;&#x5E38;&#x5904;&#x7406;</h3>
+<pre><code>try:
+    # func                               #&#x53EF;&#x80FD;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x7684;&#x4EE3;&#x7801;&#x6BB5;
+except (Exception1, Exception2) as e:   #&#x53EF;&#x4EE5;&#x6355;&#x83B7;&#x591A;&#x4E2A;&#x5F02;&#x5E38;&#x5E76;&#x5904;&#x7406;
+    # do something                       #&#x5F02;&#x5E38;&#x5904;&#x7406;&#x4EE3;&#x7801;
+else:
+    # pass                               #&#x6CA1;&#x6709;&#x6355;&#x83B7;&#x5230;&#x5F02;&#x5E38;
+finally:
+    # pass                               #&#x65E0;&#x8BBA;&#x5F02;&#x5E38;&#x6709;&#x6CA1;&#x6709;&#x6355;&#x83B7;&#x6700;&#x540E;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF0C;&#x4E00;&#x822C;&#x5904;&#x7406;&#x8D44;&#x6E90;&#x7684;&#x5173;&#x95ED;&#x548C;&#x91CA;&#x653E;
+</code></pre><h3 id="&#x81EA;&#x5B9A;&#x4E49;&#x5F02;&#x5E38;">&#x81EA;&#x5B9A;&#x4E49;&#x5F02;&#x5E38;</h3>
+<p>&#x7EE7;&#x627F;Exception&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x662F;BaseException</p>
+<p>&#x56E0;&#x4E3A;&#x5982;&#x679C;&#x7EE7;&#x627F;BaseException&#xFF0C;&#x5E0C;&#x671B;&#x901A;&#x8FC7;&#x6355;&#x83B7;BaseException&#x6765;&#x6355;&#x83B7;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#x5F02;&#x5E38;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x4F1A;&#x51FA;&#x73B0;&#x7CFB;&#x7EDF;&#x5F02;&#x5E38;&#x4E5F;&#x88AB;&#x6355;&#x83B7;&#x7684;&#x4E25;&#x91CD;&#x95EE;&#x9898;&#xFF0C;&#x8BE5;&#x95EE;&#x9898;&#x4F1A;&#x5BFC;&#x81F4;&#x4F8B;&#x5982;ctrl+c&#x8FD9;&#x6837;&#x7684;&#x7CFB;&#x7EDF;&#x5F02;&#x5E38;&#x65E0;&#x6CD5;&#x88AB;&#x89E3;&#x91CA;&#x6355;&#x83B7;&#x4ECE;&#x800C;&#x5BFC;&#x81F4;&#x7A0B;&#x5E8F;&#x65E0;&#x6CD5;&#x7EC8;&#x6B62;</p>
+<p>raise MyException()&#x629B;&#x51FA;&#x5F02;&#x5E38;</p>
+<h2 id="unit-testing-&#x5355;&#x5143;&#x6D4B;&#x8BD5;">unit testing &#x5355;&#x5143;&#x6D4B;&#x8BD5;</h2>
+<ul>
+<li>&#x9488;&#x5BF9;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C; &#x4E00;&#x4E2A;&#x7C7B;&#x8FD9;&#x6837;&#x7684;&#x5C0F;&#x5355;&#x5143;&#x8FDB;&#x884C;&#x6B63;&#x786E;&#x6027;&#x6821;&#x9A8C;</li>
+<li>&#x4ECE;&#x800C;&#x5B9E;&#x73B0;&#x81EA;&#x5E95;&#x5411;&#x4E0A;&#x4FDD;&#x8BC1;&#x7A0B;&#x5E8F;&#x7684;&#x6B63;&#x786E;&#x6027;</li>
+</ul>
+<h3 id="&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x7684;&#x610F;&#x4E49;">&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x7684;&#x610F;&#x4E49;</h3>
+<ol>
+<li>&#x4FDD;&#x8BC1;&#x903B;&#x8F91;&#x6B63;&#x786E;</li>
+<li>&#x5F71;&#x54CD;&#x8BBE;&#x8BA1;&#xFF0C;&#x6613;&#x6D4B; = &#x9AD8;&#x5185;&#x805A;&#xFF0C;&#x4F4E;&#x8026;&#x5408;</li>
+<li>&#x65B9;&#x4FBF;&#x56DE;&#x5F52;&#x6D4B;&#x8BD5;</li>
+</ol>
+<h3 id="&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x76F8;&#x5173;&#x5E93;">&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x76F8;&#x5173;&#x5E93;</h3>
+<ul>
+<li>nose/pytest &#x8F83;&#x4E3A;&#x5E38;&#x7528;</li>
+<li>mock &#x6A21;&#x5757;</li>
+<li>coverage &#x7EDF;&#x8BA1;&#x8986;&#x76D6;&#x7387;</li>
+</ul>
+<h4 id="pytest">pytest</h4>
+<pre><code>pip install pytest
+def test():       #xxx.py&#x4E0B;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;func&#x662F;&#x5F85;&#x6D4B;&#x8BD5;&#x5355;&#x5143;
+    assert func(&apos;&#x6B63;&#x5E38;&#x503C;&apos;) == &apos;&#x9884;&#x671F;&#x503C;&apos;
+    assert func(&apos;&#x8FB9;&#x754C;&#x503C;&apos;) == &apos;&#x9884;&#x671F;&#x503C;&apos;
+    assert func(&apos;&#x5F02;&#x5E38;&#x503C;&apos;) == &apos;&#x9884;&#x671F;&#x503C;&apos;
+pytest xxx.py    #pytest&#x4F1A;&#x6267;&#x884C;xxx.py&#x4E0B;test&#x65B9;&#x6CD5;&#x5185;&#x7684;&#x6240;&#x6709;&#x6D4B;&#x8BD5;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;
+</code></pre><h4 id="mock">mock</h4>
+<p>&#x5728;&#x9879;&#x76EE;&#x7684;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x4F1A;&#x9047;&#x5230;&#xFF1A;</p>
+<ol>
+<li>&#x63A5;&#x53E3;&#x7684;&#x4F9D;&#x8D56;</li>
+<li>&#x5916;&#x90E8;&#x63A5;&#x53E3;&#x8C03;&#x7528;</li>
+<li>&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#x975E;&#x5E38;&#x590D;&#x6742;</li>
+</ol>
+<p>&#x4F46;&#x662F;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x5E94;&#x8BE5;&#x53EA;&#x9488;&#x5BF9;&#x5F53;&#x524D;&#x5355;&#x5143;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;, &#x6240;&#x6709;&#x7684;&#x5185;&#x90E8;&#x6216;&#x5916;&#x90E8;&#x7684;&#x4F9D;&#x8D56;&#x5E94;&#x8BE5;&#x8981;&#x6C42;&#x662F;&#x7A33;&#x5B9A;&#x7684;, &#x8BA9;&#x6D4B;&#x8BD5;&#x80FD;&#x805A;&#x7126;&#x5728;&#x5F53;&#x524D;&#x5355;&#x5143;&#x7684;&#x5B9E;&#x73B0;&#x4E0A;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x6D4B;&#x8BD5;A&#x6A21;&#x5757;&#xFF0C;&#x7136;&#x540E;A&#x6A21;&#x5757;&#x4F9D;&#x8D56;&#x4E8E;B&#x6A21;&#x5757;&#x7684;&#x8C03;&#x7528;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x7531;&#x4E8E;B&#x6A21;&#x5757;&#x7684;&#x6539;&#x53D8;&#xFF0C;&#x5BFC;&#x81F4;&#x4E86;A&#x6A21;&#x5757;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x7684;&#x6539;&#x53D8;&#xFF0C;&#x4ECE;&#x800C;&#x4F7F;A&#x6A21;&#x5757;&#x7684;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x5931;&#x8D25;&#x3002;&#x5BF9;&#x4E8E;A&#x6A21;&#x5757;&#xFF0C;&#x4EE5;&#x53CA;A&#x6A21;&#x5757;&#x7684;&#x7528;&#x4F8B;&#x6765;&#x8BF4;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x53D8;&#x5316;&#xFF0C;&#x6D4B;&#x8BD5;&#x4E0D;&#x5E94;&#x8BE5;&#x5931;&#x8D25;&#x3002;</p>
+<p>&#x6B64;&#x65F6;&#x6211;&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;mock&#x5BF9;&#x8C61;&#x6A21;&#x62DF;B&#x6A21;&#x5757;&#x6765;&#x6D3E;&#x51FA;B&#x6A21;&#x5757;&#x5BF9;A&#x6A21;&#x5757;&#x7684;&#x5E72;&#x6270;</p>
+<h5 id="&#x57FA;&#x672C;&#x7528;&#x6CD5;">&#x57FA;&#x672C;&#x7528;&#x6CD5;</h5>
+<pre><code># client.py&#x6587;&#x4EF6;
+import requests
+
+def send_request(url):
+    r = requests.get(url)
+    return r.status_code
+def visit_baidu():
+    return send_request(&quot;http://www.baidu.com&quot;)
+
+# test.py&#x6587;&#x4EF6;
+import unittest
+from unittest import mock
+from . import client
+
+class TestClient(unittest.TestCase):
+    def test_success_request(self):
+        success_send = mock.Mock(return_value=&apos;200&apos;)    #&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x8FD4;&#x56DE;&#x503C;&#x662F;200&#x7684;mock&#x5BF9;&#x8C61;
+        client.send_request = success_send              #&#x7528;mock&#x5BF9;&#x8C61;&#x66FF;&#x6362;client&#x6A21;&#x5757;&#x7684;send_request&#x65B9;&#x6CD5;
+        self.assertEqual(client.visit_baidu(), &apos;200&apos;)  #&#x6D4B;&#x8BD5;client&#x6A21;&#x5757;&#x7684;visit_baidu&#x65B9;&#x6CD5;
+</code></pre><h6 id="mockpatch">mock.patch</h6>
+<p>mock&#x65B9;&#x6CD5;</p>
+<pre><code>import unittest
+from unittest import mock
+from . import client
+
+class TestClient(unittest.TestCase):
+    @mock.patch(&apos;client.send_request&apos;)
+    def test_success_request(self, mock_send_request): #mock_send_request&#x5C31;&#x662F;&#x66FF;&#x6362;&#x7684;mock&#x5BF9;&#x8C61;
+        mock_send_request.return_value=&apos;200&apos;           #&#x8BBE;&#x7F6E;mock&#x5BF9;&#x8C61;&#x7684;&#x8FD4;&#x56DE;&#x503C;
+        self.assertEqual(client.visit_baidu(), &apos;200&apos;)  #&#x6D4B;&#x8BD5;client&#x6A21;&#x5757;&#x7684;visit_baidu&#x65B9;&#x6CD5;
+</code></pre><h5 id="&#x8FDB;&#x9636;&#x4F7F;&#x7528;">&#x8FDB;&#x9636;&#x4F7F;&#x7528;</h5>
+<p>&#x901A;&#x8FC7;mock&#x5BF9;&#x8C61;&#x6765;&#x68C0;&#x67E5;&#x65B9;&#x6CD5;&#x662F;&#x5426;&#x88AB;&#x8C03;&#x7528;&#xFF1F;&#x8C03;&#x7528;&#x65F6;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x60C5;&#x51B5;&#xFF1F;</p>
+<pre><code>class TestClient(unittest.TestCase):
+    def test_call_send_request_with_right_arguments(self):
+        client.send_request = mock.Mock()                   #&#x66FF;&#x6362;&#x539F;&#x65B9;&#x6CD5;send_request&#x4E3A;&#x4E00;&#x4E2A;mock&#x5BF9;&#x8C61;
+        client.visit_ustack()
+        self.assertEqual(client.send_request.called, True)  #&#x5224;&#x65AD;mock&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x88AB;&#x8C03;&#x7528;
+        call_args = client.send_request.call_args           #&#x83B7;&#x53D6;mock&#x5BF9;&#x8C61;&#x63A5;&#x6536;&#x5230;&#x7684;&#x53C2;&#x6570;
+        self.assertIsInstance(call_args[0][0], str)         #&#x5224;&#x65AD;&#x63A5;&#x6536;&#x7684;&#x53C2;&#x6570;&#x662F;&#x5426;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;
+</code></pre><p>Mock.called&#xFF1A;&#x8868;&#x793A;&#x8BE5;mock&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x88AB;&#x8C03;&#x7528;&#x8FC7;</p>
+<p>Mock.call_args&#xFF1A;&#x662F;&#x4E00;&#x4E2A;tuple&#x5BF9;&#x8C61;&#xFF0C;&#x5B58;&#x50A8;&#x4E86;&#x6BCF;&#x6B21;&#x8BE5;mock&#x5BF9;&#x8C61;&#x88AB;&#x8C03;&#x7528;&#x65F6;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x6BCF;&#x4E2A;tuple&#x5143;&#x7D20;&#x90FD;&#x5B58;&#x50A8;&#x8BE5;&#x6B21;&#x8C03;&#x7528;&#x65F6;&#x4F20;&#x5165;&#x7684;(<em>args,*</em>kwargs)</p>
+<p><code>((args1, kwargs1), (args2, kwargs2), ....(argsN, kwargsN))</code></p>
+<h5 id="patch&#x7C7B;&#x53C2;&#x6570;">patch&#x7C7B;&#x53C2;&#x6570;</h5>
+<pre><code>unittest.mock.patch(target, new=DEFAULT, spec=None, create=False, spec_set=None, autospec=None, new_callable=None, **kwargs)
+</code></pre><ul>
+<li>target-&gt;str, &#x683C;&#x5F0F;&#x4E3A;&quot;package.module.ClassName&quot;, &#x6307;&#x5B9A;&#x8981;&#x66FF;&#x6362;&#x76EE;&#x6807;&#x5BF9;&#x8C61;</li>
+</ul>
+<p>&#x8BE6;&#x60C5;&#x53C2;&#x8003;&#x5B98;&#x65B9;&#x6587;&#x6863;&#xFF1A;<strong><a href="https://docs.python.org/3/library/unittest.mock.html#unittest.mock.patch" title="patch" target="_blank">patch</a></strong>
+()</p>
+<h5 id="mock&#x7C7B;&#x53C2;&#x6570;">mock&#x7C7B;&#x53C2;&#x6570;</h5>
+<pre><code>class unittest.mock.Mock(spec=None, side_effect=None, return_value=DEFAULT, wraps=None, name=None, spec_set=None, unsafe=False, **kwargs)
+</code></pre><ul>
+<li><p><code>return_value</code>&#xFF1A;&#x5F53;&#x53C2;&#x6570;<code>side_effect</code>&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#x662F;<code>DEFAULT</code>&#x65F6;&#xFF0C;mock&#x5BF9;&#x8C61;&#x7684;&#x8C03;&#x7528;&#x4F1A;&#x8FD4;&#x56DE;<code>return_value</code>&#x7684;&#x503C;</p>
+</li>
+<li><p><code>side_effect</code>&#xFF1A;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x53EF;&#x8C03;&#x7528;&#x5BF9;&#x8C61;F&#xFF08;&#x4F8B;&#x5982;&#x51FD;&#x6570;&#xFF09;&#xFF0C;&#x5F53;&#x8FD4;&#x56DE;&#x503C;&#x4E0D;&#x662F;DEFAULT&#x65F6;&#xFF0C;mock&#x5BF9;&#x8C61;&#x7684;&#x8C03;&#x7528;&#x4F1A;&#x8FD4;&#x56DE;&#x8BE5;&#x5BF9;&#x8C61;F&#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x53EF;&#x7528;&#x4F5C;&#x52A8;&#x6001;&#x8BBE;&#x7F6E;mock&#x7C7B;&#x7684;&#x8FD4;&#x56DE;&#x503C;</p>
+</li>
+</ul>
+<p>&#x8BE6;&#x60C5;&#x53C2;&#x8003;&#x5B98;&#x65B9;&#x6587;&#x6863;&#xFF1A;<strong><a href="https://docs.python.org/3/library/unittest.mock.html#unittest.mock.Mock" title="Mock" target="_blank">Mock&#x5BF9;&#x8C61;</a></strong></p>
+<h3 id="&#x6D4B;&#x8BD5;&#x539F;&#x7406;">&#x6D4B;&#x8BD5;&#x539F;&#x7406;</h3>
+<p>&#x7B49;&#x4EF7;&#x7C7B;&#x5212;&#x5206;&#xFF1A;&#x6B63;&#x5E38;&#x503C;&#xFF0C;&#x8FB9;&#x754C;&#x503C;&#xFF0C;&#x5F02;&#x5E38;&#x503C;</p>
+<h2 id="python&#x4E2D;&#x7684;&#x4F5C;&#x7528;&#x57DF;">python&#x4E2D;&#x7684;&#x4F5C;&#x7528;&#x57DF;</h2>
+<p>&#x672C;&#x5730;&#x4F5C;&#x7528;&#x57DF;&#xFF08;Local&#xFF09;&#x2192;&#x5F53;&#x524D;&#x4F5C;&#x7528;&#x57DF;&#x88AB;&#x5D4C;&#x5165;&#x7684;&#x672C;&#x5730;&#x4F5C;&#x7528;&#x57DF;&#xFF08;Enclosing locals&#xFF09;&#x2192;&#x5168;&#x5C40;/&#x6A21;&#x5757;&#x4F5C;&#x7528;&#x57DF;&#xFF08;Global&#xFF09;&#x2192;&#x5185;&#x7F6E;&#x4F5C;&#x7528;&#x57DF;&#xFF08;Built-in&#xFF09;</p>
+<h2 id="closure-&#x95ED;&#x5305;">closure &#x95ED;&#x5305;</h2>
+<ol>
+<li>&#x5FC5;&#x987B;&#x6709;&#x4E00;&#x4E2A;&#x5185;&#x5D4C;&#x51FD;&#x6570;</li>
+<li>&#x5185;&#x5D4C;&#x51FD;&#x6570;&#x5FC5;&#x987B;&#x5F15;&#x7528;&#x5916;&#x90E8;&#x51FD;&#x6570;&#x7684;&#x53D8;&#x91CF;</li>
+<li>&#x5916;&#x90E8;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x5FC5;&#x987B;&#x662F;&#x5185;&#x5D4C;&#x51FD;&#x6570;</li>
+</ol>
+<p>&#x4E00;&#x822C;&#x51FD;&#x6570;&#x5728;&#x8FD0;&#x884C;&#x5B8C;&#x4E4B;&#x540E;&#x4F1A;&#x56DE;&#x6536;&#x6267;&#x884C;&#x6240;&#x5206;&#x914D;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#xFF0C;&#x4F46;&#x662F;&#x95ED;&#x5305;&#x7684;&#x5916;&#x90E8;&#x51FD;&#x6570;&#x4E0D;&#x4F1A;&#x56DE;&#x6536;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD4;&#x56DE;&#x7684;&#x95ED;&#x5305;&#x5F15;&#x7528;&#x4E86;&#x5916;&#x90E8;&#x51FD;&#x6570;&#x7684;&#x5C5E;&#x6027;&#xFF08;&#x5783;&#x573E;&#x56DE;&#x6536;&#x7684;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#xFF09;</p>
+<p>&#x56E0;&#x6B64;&#x5728;&#x7ED3;&#x675F;&#x51FD;&#x6570;&#x524D;&#x5E94;&#x5C06;&#x7528;&#x4E0D;&#x4E0A;&#x7684;&#x53D8;&#x91CF;&#x5220;&#x9664;&#x4EE5;&#x8282;&#x7701;&#x5185;&#x5B58;</p>
+<h2 id="lambda-&#x51FD;&#x6570;">lambda &#x51FD;&#x6570;</h2>
+<p>&#x533F;&#x540D;&#x51FD;&#x6570;&#xFF1A;<code>f = lambda x&#xFF0C;y : x + y + 1</code>&#xFF0C;&#x524D;&#x9762;&#x8868;&#x793A;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x540E;&#x9762;&#x8868;&#x793A;&#x51FD;&#x6570;&#x903B;&#x8F91;</p>
+<h2 id="&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;">&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;</h2>
+<h3 id="&#x9AD8;&#x7EA7;&#x51FD;&#x6570;">&#x9AD8;&#x7EA7;&#x51FD;&#x6570;</h3>
+<p><strong><em>&#x9AD8;&#x7EA7;&#x51FD;&#x6570;&#x90FD;&#x662F;&#x8FD4;&#x56DE;&#x8FED;&#x4EE3;&#x4F53;</em></strong></p>
+<pre><code># filter(bool_func, iter)&#xFF1A;&#x8C03;&#x7528;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x51FD;&#x6570;bool_func&#x6765;&#x8FED;&#x4EE3;&#x904D;&#x5386;&#x6BCF;&#x4E2A;iter&#x4E2D;&#x7684;&#x5143;&#x7D20;,&#x8FD4;&#x56DE;bool_func&#x8FD4;&#x56DE;&#x503C;&#x4E3A;true&#x7684;&#x5143;&#x7D20;&#x7684;&#x8FED;&#x4EE3;&#x4F53;&#x3002;
+a = [1,2,3,4,5,6,7]
+b = filter(lambda x: x &gt; 5, a)
+print(list(b))      #&#x8FD4;&#x56DE;[6,7]
+</code></pre><pre><code>#  map(func, iter)&#xFF1A;map&#x51FD;&#x6570;&#x662F;&#x5BF9;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x7684;&#x6BCF;&#x4E2A;&#x9879;&#x4F9D;&#x6B21;&#x6267;&#x884C;&#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x5C06;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x7EC4;&#x6210;&#x672A;&#x8FED;&#x4EE3;&#x4F53;&#x8FD4;&#x56DE;
+a = map(lambda x:x*2,[1,2,3])
+print(list(a))   #&#x8FD4;&#x56DE;[2, 4, 6]
+</code></pre><pre><code>#  reduce(func, iter)&#xFF1A;reduce&#x51FD;&#x6570;&#x662F;&#x5BF9;&#x4E00;&#x4E2A;&#x8FED;&#x4EE3;&#x4F53;&#x7684;&#x6BCF;&#x4E2A;&#x9879;&#x8FED;&#x4EE3;&#x8C03;&#x7528;&#x51FD;&#x6570;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x6C42;3&#x7684;&#x9636;&#x4E58;&#xFF1A;
+reduce(lambda x,y:x*y,range(1,4))   #&#x8FD4;&#x56DE;6
+</code></pre><h2 id="&#x7C7B;">&#x7C7B;</h2>
+<h3 id="&#x7C7B;&#x65B9;&#x6CD5;">&#x7C7B;&#x65B9;&#x6CD5;</h3>
+<pre><code>class A(object):
+    def foo(self,x):
+        print &quot;executing foo(%s,%s)&quot;%(self,x)
+
+    @classmethod    #&#x7C7B;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;A.class_foo(x)&#x8C03;&#x7528;&#xFF0C;&#x6CE8;&#x610F;&#x56E0;&#x4E3A;&#x662F;&#x7C7B;&#x65B9;&#x6CD5;&#xFF0C;&#x56E0;&#x6B64;&#x4F20;&#x5165;&#x7684;&#x662F;&#x7C7B;&#x5BF9;&#x8C61;&#x672C;&#x8EAB;cls&#x800C;&#x4E0D;&#x662F;&#x5B9E;&#x4F8B;self&#xFF0C;&#x867D;&#x7136;&#x53D8;&#x91CF;&#x540D;&#x5B57;&#x6CA1;&#x4EC0;&#x4E48;&#x5173;&#x7CFB;
+    def class_foo(cls,x):
+        print &quot;executing class_foo(%s,%s)&quot;%(cls,x)
+
+    @staticmethod   #&#x51FA;&#x4E8E;&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#x95EE;&#x9898;&#xFF0C;&#x5C06;&#x65B9;&#x6CD5;&#x6302;&#x5728;A&#x5B9E;&#x4F8B;&#x4E0A;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x4F20;&#x5165;&#x5B9E;&#x4F8B;self&#xFF0C;&#x901A;&#x8FC7;a.static_foo()&#x8C03;&#x7528;
+    def static_foo(x):
+        print &quot;executing static_foo(%s)&quot;%x
+</code></pre><h3 id="&#x7C7B;&#x53D8;&#x91CF;">&#x7C7B;&#x53D8;&#x91CF;</h3>
+<pre><code>class A(object):  
+    num = 0                  #&#x7C7B;&#x53D8;&#x91CF;
+    def __init__(self, name):  
+        self.name = name     #&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;
+
+a = A(&apos;a&apos;)
+b = A(&apos;b&apos;)
+</code></pre><p>&#x524D;&#x9762;&#x6709;&#x8BF4;&#x5230;&#xFF0C;python&#x4E00;&#x5207;&#x7686;&#x5BF9;&#x8C61;&#xFF0C;&#x662F;&#x5BF9;&#x8C61;&#x5C31;&#x5141;&#x8BB8;&#x6709;&#x5C5E;&#x6027;</p>
+<p>&#x4E0A;&#x9762;&#x7684;num&#x5C31;&#x5C5E;&#x4E8E;&#x7C7B;A&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x4E0D;&#x8FC7;&#x6240;&#x6709;A&#x7684;&#x5B9E;&#x4F8B;a&#xFF0C;b&#x90FD;&#x80FD;&#x8BBF;&#x95EE;&#x5230;&#xFF08;&#x8FD9;&#x4E2A;&#x5E94;&#x8BE5;&#x8DDF;&#x4F5C;&#x7528;&#x57DF;&#x94FE;&#x6709;&#x5173;&#xFF09;&#xFF0C;&#x4F46;&#x662F;&#x53EA;&#x6709;&#x7C7B;A&#x672C;&#x8EAB;&#x5177;&#x6709;&#x4FEE;&#x6539;&#x6743;&#x9650;</p>
+<h2 id="&#x5B57;&#x7B26;&#x4E32;&#x683C;&#x5F0F;&#x5316;--and-format">&#x5B57;&#x7B26;&#x4E32;&#x683C;&#x5F0F;&#x5316; % and .format</h2>
+<pre><code>#!/usr/bin/python
+sub1 = &quot;python string!&quot;
+sub2 = &quot;an arg&quot;
+
+a = &quot;i am a %s&quot; % sub1                  # &quot;i am a python string!&quot;
+b = &quot;i am a {0}&quot;.format(sub1)           # &quot;i am a python string!&quot;
+
+c = &quot;with %(kwarg)s!&quot; % {&apos;kwarg&apos;:sub2}  # &quot;with an arg!&quot;
+d = &quot;with {kwarg}!&quot;.format(kwarg=sub2)  # &quot;with an arg!&quot;
+</code></pre><h2 id="&#x88C5;&#x9970;&#x5668;">&#x88C5;&#x9970;&#x5668;</h2>
+<p>&#x4E0D;&#x6539;&#x53D8;&#x539F;&#x6709;&#x65B9;&#x6CD5;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5728;&#x539F;&#x6709;&#x65B9;&#x6CD5;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x6DFB;&#x52A0;&#x529F;&#x80FD;&#xFF0C;&#x5C31;&#x50CF;&#x4F69;&#x6234;&#x88C5;&#x9970;&#x54C1;&#x4E00;&#x6837;&#x7684;&#x5B9E;&#x73B0;&#x79F0;&#x4E3A;<strong>&#x88C5;&#x9970;&#x5668;</strong></p>
+<p>&#x5173;&#x952E;&#x5B57;@&#x80FD;&#x5728;&#x65B9;&#x6CD5;&#x5BF9;&#x8C61;&#x5916;&#x90E8;&#x6DFB;&#x52A0;<strong>&#x88C5;&#x9970;&#x5668;</strong></p>
+<p>&#x4F8B;&#x5982;&#x6267;&#x884C;&#x67D0;&#x65B9;&#x6CD5;&#x7684;&#x4EE3;&#x7801;&#x6BB5;&#x524D;&#x5148;&#x6253;&#x5370;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;</p>
+<pre><code>import functools
+def log(function):
+    @functools.wraps(function)
+    def wrapper(*arg, **kw):
+        print(function.__name__)
+        return function(*arg, **kw)
+    return wrapper
+
+@log        #&#x7ED9;function&#x65B9;&#x6CD5;&#x4F69;&#x6234;log&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x4E4B;&#x540E;&#x8C03;&#x7528;function()&#x5C31;&#x4F1A;&#x5148;&#x6253;&#x5370;
+def function()
+</code></pre><p>&#x4E2D;&#x95F4;&#x7684;<code>@functools.wraps(function)</code>&#x7ED9;&#x8FD4;&#x56DE;&#x7684;&#x65B0;&#x65B9;&#x6CD5;&#x5BF9;&#x8C61;&#x7ED1;&#x5B9A;&#x539F;&#x6709;&#x65B9;&#x6CD5;&#x5BF9;&#x8C61;&#x7684;&#x540D;&#x79F0;&#x5C5E;&#x6027;</p>
+<h2 id="&#x5185;&#x7F6E;&#x6570;&#x636E;&#x7ED3;&#x6784;">&#x5185;&#x7F6E;&#x6570;&#x636E;&#x7ED3;&#x6784;</h2>
+<h2 id="&#x4E00;&#x822C;&#x5E8F;&#x5217;&#x64CD;&#x4F5C;">&#x4E00;&#x822C;&#x5E8F;&#x5217;&#x64CD;&#x4F5C;</h2>
+<p>&#x5927;&#x591A;&#x6570;&#x5E8F;&#x5217;&#x7C7B;&#x578B;&#x5305;&#x62EC;&#x53EF;&#x6539;&#x53D8;&#x5E8F;&#x5217;&#xFF08;&#x4F8B;&#x5982;&#x5217;&#x8868;&#xFF09;&#x548C;&#x4E0D;&#x53EF;&#x6539;&#x53D8;&#x5E8F;&#x5217;&#xFF08;&#x5143;&#x7EC4;&#xFF09;&#x90FD;&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x64CD;&#x4F5C;
+<strong><a href="https://docs.python.org/zh-cn/3/library/stdtypes.html#typesseq-common" title="&#x4E00;&#x822C;&#x5E8F;&#x5217;&#x64CD;&#x4F5C;&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;" target="_blank">&#x4E00;&#x822C;&#x5E8F;&#x5217;&#x64CD;&#x4F5C;&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;</a></strong></p>
+<h2 id="&#x53EF;&#x53D8;&#x5E8F;&#x5217;&#x64CD;&#x4F5C;">&#x53EF;&#x53D8;&#x5E8F;&#x5217;&#x64CD;&#x4F5C;</h2>
+<p>&#x53EF;&#x53D8;&#x5E8F;&#x5217;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x7684;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;
+<strong><a href="https://docs.python.org/zh-cn/3/library/stdtypes.html#typesseq-mutable" title="&#x53EF;&#x53D8;&#x5E8F;&#x5217;&#x64CD;&#x4F5C;&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;" target="_blank">&#x53EF;&#x53D8;&#x5E8F;&#x5217;&#x64CD;&#x4F5C;&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;</a></strong></p>
+<h3 id="list">list</h3>
+<p><strong><a href="https://docs.python.org/zh-cn/3/library/stdtypes.html#list" title="list&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;" target="_blank">list&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;</a></strong></p>
+<p>&#x5143;&#x7EC4;&#x5B9E;&#x73B0;&#x4E86;&#x6240;&#x6709; <strong><em>&#x4E00;&#x822C;</em></strong> &#x548C; <strong><em>&#x53EF;&#x53D8;</em></strong>&#x5E8F;&#x5217;&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
+<h3 id="tuple">tuple</h3>
+<p><code>class tuple([iterable])</code></p>
+<p><strong><a href="https://docs.python.org/zh-cn/3/library/stdtypes.html#tuple" title="tuple&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;" target="_blank">tuple&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;</a></strong></p>
+<p>&#x5143;&#x7EC4;&#x5B9E;&#x73B0;&#x4E86;&#x6240;&#x6709; <strong><em>&#x4E00;&#x822C;</em></strong> &#x5E8F;&#x5217;&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
+<h3 id="collectionsnamedtuple">collections.namedtuple</h3>
+<p>&#x4E3A;&#x5143;&#x7EC4;&#x5185;&#x90E8;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x547D;&#x540D;&#xFF0C;&#x53D8;&#x6210;&#x7C7B;&#x4F3C;&#x5B57;&#x5178;&#x8FD9;&#x6837;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x4E0D;&#x8FC7;&#x4F9D;&#x7136;&#x662F;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;&#x7684;</p>
+<pre><code>collections.namedtuple(typename, field_names, verbose=False, rename=False)
+typename        #&#x5143;&#x7EC4;&#x540D;&#x79F0;
+field_names     #&#x5143;&#x7EC4;&#x4E2D;&#x5143;&#x7D20;&#x7684;&#x540D;&#x79F0;
+
+import collections
+# &#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x6765;&#x7ED9; namedtuple &#x5B9A;&#x4E49;&#x65B9;&#x6CD5;&#x540D;
+#User = collections.namedtuple(&apos;User&apos;, [&apos;name&apos;, &apos;age&apos;, &apos;id&apos;])
+User = collections.namedtuple(&apos;User&apos;, &apos;name age id&apos;)    #&#x8FD9;&#x79CD;&#x66F4;&#x52A0;&#x65B9;&#x4FBF;
+user = User(&apos;tester&apos;, &apos;22&apos;, &apos;464643123&apos;)
+print(user)         #User(name=&apos;tester&apos;, age=&apos;22&apos;, id=&apos;464643123&apos;)
+print(user.name)    #&apos;tester&apos;
+user.name = &apos;1&apos;     #&#x629B;&#x51FA;&#x5F02;&#x5E38;AttributeError: can&apos;t set attribute
+</code></pre><p><strong><a href="https://docs.python.org/zh-cn/3/library/collections.html#collections.namedtuple" title="namedtuple&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;" target="_blank">namedtuple&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;</a></strong></p>
+<h3 id="collectionsdeque">collections.deque</h3>
+<p>&#x53CC;&#x7AEF;&#x961F;&#x5217;&#xFF0C;&#x4E24;&#x7AEF;&#x90FD;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;(append)&#x548C;&#x5F39;&#x51FA;(pop)&#xFF0C;&#x5927;&#x6982;&#x5F00;&#x9500;&#x90FD;&#x662F; O(1) &#x590D;&#x6742;&#x5EA6;</p>
+<p>list&#x56E0;&#x4E3A;&#x662F;&#x7EBF;&#x5F62;&#x5B58;&#x50A8;&#xFF0C;&#x63D2;&#x5165;insert(0, v)&#x548C;&#x5220;&#x9664;pop(0)&#x7684;&#x6548;&#x7387;&#x90FD;&#x975E;&#x5E38;&#x4F4E;&#xFF0C;deque&#x4F18;&#x5316;&#x4E86;&#x76F8;&#x5E94;&#x4E86;&#x64CD;&#x4F5C;</p>
+<p><code>class collections.deque([iterable[, maxlen]])</code></p>
+<p>&#x5982;&#x679C;&#x8BBE;&#x5B9A;&#x4E86;maxlen&#xFF0C;&#x4E00;&#x65E6;&#x9650;&#x5B9A;&#x957F;&#x5EA6;&#x7684;deque&#x6EE1;&#x4E86;&#xFF0C;&#x5F53;&#x65B0;&#x9879;&#x52A0;&#x5165;&#x65F6;&#xFF0C;&#x540C;&#x6837;&#x6570;&#x91CF;&#x7684;&#x9879;&#x5C31;&#x4ECE;&#x53E6;&#x4E00;&#x7AEF;&#x5F39;&#x51FA;&#x3002;</p>
+<p><strong><a href="https://docs.python.org/zh-cn/3/library/collections.html#collections.deque" title="deque&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;" target="_blank">deque&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;</a></strong></p>
+<h3 id="collectionscounter">collections.Counter</h3>
+<p><code>class collections.Counter([iterable-or-mapping])</code></p>
+<p>&#x662F;dick&#x7684;&#x4E00;&#x4E2A;&#x5B50;&#x7C7B;&#xFF0C;&#x7528;&#x4E8E;&#x8BA1;&#x6570;&#x53EF;&#x54C8;&#x5E0C;&#x5BF9;&#x8C61;</p>
+<p>&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x96C6;&#x5408;&#xFF0C;&#x5143;&#x7D20;&#x50CF;&#x5B57;&#x5178;&#x952E;(key)&#x4E00;&#x6837;&#x5B58;&#x50A8;&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x8BA1;&#x6570;&#x5B58;&#x50A8;&#x4E3A;&#x503C;&#xFF08;&#x8BA1;&#x6570;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x4F55;&#x6574;&#x6570;&#x503C;&#xFF0C;&#x5305;&#x62EC;0&#x548C;&#x8D1F;&#x6570;&#xFF09;</p>
+<pre><code># &#x521B;&#x5EFA;Counter&#x5BF9;&#x8C61;
+c = Counter(&apos;gallahad&apos;)                 # print(c)-&gt;Counter({&apos;a&apos;: 3, &apos;l&apos;: 2, &apos;g&apos;: 1, &apos;h&apos;: 1, &apos;d&apos;: 1})
+c = Counter({&apos;red&apos;: 4, &apos;blue&apos;: 2})      # a new counter from a mapping
+c = Counter(cats=4, dogs=8)             # print(c)-&gt;Counter({&apos;dogs&apos;: 8, &apos;cats&apos;: 4})
+</code></pre><pre><code># elements&#x65B9;&#x6CD5;&#xFF0C;&#x5C06;&#x5143;&#x7D20;&#x7EC4;&#x6210;&#x6210;&#x4E00;&#x4E2A;&#x8FED;&#x4EE3;&#x4F53;&#x8FD4;&#x56DE;
+c = Counter(a=4, b=2, c=0, d=-2)    #
+c.elements()                        #&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x662F;&#x4E00;&#x4E2A;&#x8FED;&#x4EE3;&#x4F53;&lt;itertools.chain object at 0x00000275ED4B4E10&gt;
+list(c.elements())                  #[&apos;a&apos;, &apos;a&apos;, &apos;a&apos;, &apos;a&apos;, &apos;b&apos;, &apos;b&apos;]
+</code></pre><p><strong><a href="https://docs.python.org/zh-cn/3/library/collections.html#collections.Counter" title="Counter&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;" target="_blank">Counter&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;</a></strong></p>
+<h3 id="dict">dict</h3>
+<pre><code>class dict(**kwarg)
+class dict(mapping, **kwarg)
+class dict(iterable, **kwarg)
+</code></pre><pre><code>a = dict(one=1, two=2, three=3)
+b = {&apos;one&apos;: 1, &apos;two&apos;: 2, &apos;three&apos;: 3}
+c = dict(zip([&apos;one&apos;, &apos;two&apos;, &apos;three&apos;], [1, 2, 3]))
+d = dict([(&apos;two&apos;, 2), (&apos;one&apos;, 1), (&apos;three&apos;, 3)])
+e = dict({&apos;three&apos;: 3, &apos;one&apos;: 1, &apos;two&apos;: 2})
+a == b == c == d == e
+#&#x6CE8;&#x610F;&#x6BCF;&#x4E2A;&#x521B;&#x5EFA;&#x65B9;&#x5F0F;&#x4F20;&#x53C2;&#x7684;&#x987A;&#x5E8F;&#x4E0D;&#x540C;&#xFF0C;&#x4F46;&#x8FD9;&#x91CC;&#x4ECD;&#x7136;&#x8FD4;&#x56DE;True&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x77E5;&#x9053;dict&#x7684;&#x76F8;&#x7B49;&#x6D4B;&#x8BD5;&#x662F;&#x987A;&#x5E8F;&#x4E0D;&#x654F;&#x611F;&#x7684;
+</code></pre><p><strong><a href="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict" title="dict&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;" target="_blank">dict&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;</a></strong></p>
+<h3 id="collectionsordereddict">collections.orderedDict</h3>
+<h3 id="set-&#xFF06;-frozenset">set &#xFF06; frozenset</h3>
+<p><code>set</code>&#x5BF9;&#x8C61;&#x662F;&#x7531;&#x5177;&#x6709;&#x552F;&#x4E00;&#x6027;&#x7684;<code>hashable</code>&#x5BF9;&#x8C61;&#x6240;&#x7EC4;&#x6210;&#x7684;&#x65E0;&#x5E8F;&#x591A;&#x9879;&#x96C6;&#xFF0C;&#x5E38;&#x7528;&#x4E8E;&#x6210;&#x5458;&#x68C0;&#x6D4B;&#x3001;&#x53BB;&#x91CD;&#x4EE5;&#x53CA;&#x96C6;&#x5408;&#x8BA1;&#x7B97;&#xFF08;&#x4F8B;&#x5982;&#x4EA4;&#x96C6;&#x3001;&#x5E76;&#x96C6;&#x3001;&#x5DEE;&#x96C6;&#x4E0E;&#x5BF9;&#x79F0;&#x5DEE;&#x96C6;&#x7B49;&#x7B49;&#xFF09;</p>
+<p><code>set</code>&#x7C7B;&#x578B;&#x662F;&#x53EF;&#x53D8;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>add()</code>&#x548C;<code>remove()</code>&#x8FD9;&#x6837;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x6539;&#x53D8;</p>
+<p><code>frozenset</code>&#x7C7B;&#x578B;&#x662F;&#x4E0D;&#x53EF;&#x53D8;&#x5BF9;&#x8C61;&#x5E76;&#x4E14;&#x4E3A;<code>hashable</code>&#xFF0C;&#x5176;&#x5185;&#x5BB9;&#x5728;&#x88AB;&#x521B;&#x5EFA;&#x540E;&#x4E0D;&#x80FD;&#x518D;&#x6539;&#x53D8;</p>
+<pre><code>class set([iterable])
+class frozenset([iterable])
+</code></pre><p><strong><a href="https://docs.python.org/zh-cn/3/library/stdtypes.html#set-types-set-frozenset" title="set&#x548C;frozenset&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;" target="_blank">set&#x548C;frozenset&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;</a></strong></p>
+<h3 id="sorted">sorted</h3>
+<pre><code>sorted(iterable, *, key=None, reverse=False)       #&#x6CE8;&#x610F;&#x90A3;&#x4E2A;*&#xFF0C;&#x4E24;&#x4E2A;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x90FD;&#x662F;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;
+key &#x6307;&#x5B9A;&#x5E26;&#x6709;&#x5355;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x7528;&#x4E8E;&#x4ECE; iterable &#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x4E2D;&#x63D0;&#x53D6;&#x7528;&#x4E8E;&#x6BD4;&#x8F83;&#x7684;&#x952E; (&#x4F8B;&#x5982; key=str.lower&#xFF0C;&#x4F1A;&#x628A;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x5148;&#x53D8;&#x4E3A;&#x5C0F;&#x5199;&#x518D;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;)&#x3002; &#x9ED8;&#x8BA4;&#x503C;&#x4E3A; None (&#x76F4;&#x63A5;&#x6BD4;&#x8F83;&#x5143;&#x7D20;)&#x3002;
+</code></pre><p><strong><a href="https://docs.python.org/zh-cn/3/library/functions.html#sorted" title="&#x5185;&#x7F6E;sorted&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;" target="_blank">&#x5185;&#x7F6E;sorted&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;</a></strong></p>
+<h3 id="bisect">bisect</h3>
+<pre><code>bisect.bisect_left(a, x, lo=0, hi=len(a))
+&#x5728; a &#x4E2D;&#x627E;&#x5230; x &#x5408;&#x9002;&#x7684;&#x63D2;&#x5165;&#x70B9;&#x4EE5;&#x7EF4;&#x6301;&#x6709;&#x5E8F;&#x3002;&#x53C2;&#x6570; lo &#x548C; hi &#x53EF;&#x4EE5;&#x88AB;&#x7528;&#x4E8E;&#x786E;&#x5B9A;&#x9700;&#x8981;&#x8003;&#x8651;&#x7684;&#x5B50;&#x96C6;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x5DE6;&#x4FA7;&#x96C6;&#x5408;a[lo:i]&#x4ED6;&#x4EEC;&#x7684;&#x503C;&#x5C0F;&#x4E8E;x&#xFF0C;&#x53F3;&#x4FA7;&#x96C6;&#x5408;a[i:hi]&#x4ED6;&#x4EEC;&#x7684;&#x503C;&#x90FD;&#x5927;&#x4E8E;x
+&#x5982;&#x679C; x &#x5DF2;&#x7ECF;&#x5728; a &#x91CC;&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x4E48;&#x8FD4;&#x56DE;&#x7684;&#x63D2;&#x5165;&#x70B9;&#x4F1A;&#x5728;&#x5DF2;&#x5B58;&#x5728;&#x5143;&#x7D20;&#x4E4B;&#x524D;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x5DE6;&#x8FB9;&#xFF09;
+
+bisect.bisect_right(a, x, lo=0, hi=len(a))
+&#x5982;&#x679C; x &#x5DF2;&#x7ECF;&#x5728; a &#x91CC;&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x4E48;&#x8FD4;&#x56DE;&#x7684;&#x63D2;&#x5165;&#x70B9;&#x4F1A;&#x5728;&#x5DF2;&#x5B58;&#x5728;&#x5143;&#x7D20;&#x4E4B;&#x540E;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x53F3;&#x8FB9;&#xFF09;
+
+bisect.insort_left(a, x, lo=0, hi=len(a))
+&#x5C06; x &#x63D2;&#x5165;&#x5230;&#x4E00;&#x4E2A;&#x6709;&#x5E8F;&#x5E8F;&#x5217; a &#x91CC;&#xFF0C;&#x5E76;&#x7EF4;&#x6301;&#x5176;&#x6709;&#x5E8F;&#x3002;&#x5982;&#x679C; a &#x6709;&#x5E8F;&#x7684;&#x8BDD;&#xFF0C;&#x8FD9;&#x76F8;&#x5F53;&#x4E8E; a.insert(bisect.bisect_left(a, x, lo, hi), x)&#x3002;&#x8981;&#x6CE8;&#x610F;&#x641C;&#x7D22;&#x662F; O(log n) &#x7684;&#xFF0C;&#x63D2;&#x5165;&#x5374;&#x662F; O(n) &#x7684;&#x3002;
+</code></pre><p><strong><a href="https://docs.python.org/zh-cn/3/library/bisect.html?highlight=bisect#module-bisect" title="&#x6570;&#x7EC4;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x7B97;&#x6CD5;&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;" target="_blank">&#x6570;&#x7EC4;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x7B97;&#x6CD5;&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;</a></strong></p>
+<h3 id="heapq">heapq</h3>
+<p>heapq&#x6784;&#x5EFA;&#x7684;&#x662F; &#x5C0F;&#x6839;&#x5806;</p>
+<p>&#x8981;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5806;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;list&#x6765;&#x521D;&#x59CB;&#x5316;&#x4E3A; [] &#xFF0C;&#x6216;&#x8005;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x51FD;&#x6570; heapify() &#xFF0C;&#x6765;&#x628A;&#x4E00;&#x4E2A;list&#x8F6C;&#x6362;&#x6210;&#x5806;</p>
+<pre><code># &#x65B9;&#x6CD5;&#x4E00;
+def heapsort(iterable):
+    h = []
+    for value in iterable:
+        heapq.heappush(h, value)            #&#x9010;&#x4E2A;&#x6DFB;&#x52A0;&#x5230;&#x5806;&#x4E2D;
+    return [heapq.heappop(h) for i in range(len(h))]
+heapsort([1, 3, 5, 7, 9, 2, 4, 6, 8, 0])    #&#x8FD4;&#x56DE;[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# &#x65B9;&#x6CD5;&#x4E8C;
+h = [1, 3, 5, 7, 9, 2, 4, 6, 8, 0]
+heapq.heapify(h)                            #&#x5EFA;&#x7ACB;&#x5C0F;&#x6839;&#x5806;
+[heapq.heappop(h) for i in range(len(h))]   #&#x9010;&#x4E2A;&#x5F39;&#x51FA;&#xFF0C;&#x8FD4;&#x56DE;[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+</code></pre><p><strong><a href="https://docs.python.org/zh-cn/3/library/heapq.html?highlight=heapq#module-heapq" title="&#x5806;&#x961F;&#x5217;&#x7B97;&#x6CD5;&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;" target="_blank">&#x5806;&#x961F;&#x5217;&#x7B97;&#x6CD5;&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;</a></strong></p>
+<h3 id="functoolslrucache">functools.lru_cache</h3>
+<p>&#x4E00;&#x4E2A;&#x4E3A;&#x51FD;&#x6570;&#x63D0;&#x4F9B;&#x7F13;&#x5B58;&#x529F;&#x80FD;&#x7684;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x7F13;&#x5B58; maxsize &#x7EC4;&#x4F20;&#x5165;&#x53C2;&#x6570;&#xFF0C;&#x5728;&#x4E0B;&#x6B21;&#x4EE5;&#x76F8;&#x540C;&#x53C2;&#x6570;&#x8C03;&#x7528;&#x65F6;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x4E0A;&#x4E00;&#x6B21;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x7528;&#x4EE5;&#x8282;&#x7EA6;&#x9AD8;&#x5F00;&#x9500;&#x6216;I/O&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#x65F6;&#x95F4;</p>
+<p>&#x7531;&#x4E8E;&#x4F7F;&#x7528;&#x4E86;&#x5B57;&#x5178;&#x5B58;&#x50A8;&#x7F13;&#x5B58;&#xFF0C;&#x6240;&#x4EE5;&#x8BE5;&#x51FD;&#x6570;&#x7684;&#x56FA;&#x5B9A;&#x53C2;&#x6570;&#x548C;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;&#x5FC5;&#x987B;&#x662F;&#x53EF;&#x54C8;&#x5E0C;&#x7684;</p>
+<p>&#x4E0D;&#x540C;&#x6A21;&#x5F0F;&#x7684;&#x53C2;&#x6570;&#x53EF;&#x80FD;&#x88AB;&#x89C6;&#x4E3A;&#x4E0D;&#x540C;&#x4ECE;&#x800C;&#x4EA7;&#x751F;&#x591A;&#x4E2A;&#x7F13;&#x5B58;&#x9879;&#xFF0C;&#x4F8B;&#x5982;, f(a=1, b=2) &#x548C; f(b=2, a=1) &#x56E0;&#x5176;&#x53C2;&#x6570;&#x987A;&#x5E8F;&#x4E0D;&#x540C;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x88AB;&#x7F13;&#x5B58;&#x4E24;&#x6B21;</p>
+<p>&#x5982;&#x679C;<code>maxsize</code>&#x8BBE;&#x7F6E;&#x4E3A; None &#xFF0C;LRU&#x529F;&#x80FD;&#x5C06;&#x88AB;&#x7981;&#x7528;&#x4E14;&#x7F13;&#x5B58;&#x6570;&#x91CF;&#x65E0;&#x4E0A;&#x9650;, maxsize &#x8BBE;&#x7F6E;&#x4E3A;2&#x7684;&#x5E42;&#x65F6;&#x53EF;&#x83B7;&#x5F97;&#x6700;&#x4F73;&#x6027;&#x80FD;</p>
+<p>&#x4E3A;&#x4E86;&#x8861;&#x91CF;&#x7F13;&#x5B58;&#x7684;&#x6709;&#x6548;&#x6027;&#x4EE5;&#x4FBF;&#x8C03;&#x6574; maxsize &#x5F62;&#x53C2;&#xFF0C;&#x88AB;&#x88C5;&#x9970;&#x7684;&#x51FD;&#x6570;&#x5E26;&#x6709;&#x4E00;&#x4E2A; cache_info() &#x51FD;&#x6570;</p>
+<p><code>cache_info()</code>: &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5177;&#x540D;&#x5143;&#x7EC4;&#xFF0C;&#x5305;&#x542B;&#x547D;&#x4E2D;&#x6B21;&#x6570; hits&#xFF0C;&#x672A;&#x547D;&#x4E2D;&#x6B21;&#x6570; misses &#xFF0C;&#x6700;&#x5927;&#x7F13;&#x5B58;&#x6570;&#x91CF; maxsize &#x548C; &#x5F53;&#x524D;&#x7F13;&#x5B58;&#x5927;&#x5C0F; currsize&#x3002;&#x5728;&#x591A;&#x7EBF;&#x7A0B;&#x73AF;&#x5883;&#x4E2D;&#xFF0C;&#x547D;&#x4E2D;&#x6570;&#x4E0E;&#x672A;&#x547D;&#x4E2D;&#x6570;&#x662F;&#x4E0D;&#x5B8C;&#x5168;&#x51C6;&#x786E;&#x7684;</p>
+<p><code>cache_clear()</code>: &#x8BE5;&#x88C5;&#x9970;&#x5668;&#x4E5F;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x6E05;&#x7406;/&#x4F7F;&#x7F13;&#x5B58;&#x5931;&#x6548;&#x7684;&#x51FD;&#x6570; cache_clear()</p>
+<pre><code># &#x9759;&#x6001; Web &#x5185;&#x5BB9;&#x7684; LRU &#x7F13;&#x5B58;&#x793A;&#x4F8B;:
+@lru_cache(maxsize=32)
+def get_pep(num):
+    &apos;Retrieve text of a Python Enhancement Proposal&apos;
+    resource = &apos;http://www.python.org/dev/peps/pep-%04d/&apos; % num
+    try:
+        with urllib.request.urlopen(resource) as s:
+            return s.read()
+    except urllib.error.HTTPError:
+        return &apos;Not Found&apos;
+
+&gt;&gt;&gt; for n in 8, 290, 308, 320, 8, 218, 320, 279, 289, 320, 9991:
+...     pep = get_pep(n)
+...     print(n, len(pep))
+
+&gt;&gt;&gt; get_pep.cache_info()
+CacheInfo(hits=3, misses=8, maxsize=32, currsize=8)
+</code></pre><pre><code># &#x4EE5;&#x4E0B;&#x662F;&#x4F7F;&#x7528;&#x7F13;&#x5B58;&#x901A;&#x8FC7; &#x52A8;&#x6001;&#x89C4;&#x5212; &#x8BA1;&#x7B97; &#x6590;&#x6CE2;&#x90A3;&#x5951;&#x6570;&#x5217; &#x7684;&#x4F8B;&#x5B50;&#x3002;
+@lru_cache(maxsize=None)
+def fib(n):
+    if n &lt; 2:
+        return n
+    return fib(n-1) + fib(n-2)
+
+&gt;&gt;&gt; [fib(n) for n in range(16)]
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
+
+&gt;&gt;&gt; fib.cache_info()
+CacheInfo(hits=28, misses=16, maxsize=None, currsize=16)
+</code></pre><p><strong><a href="https://docs.python.org/zh-cn/3/library/functools.html?highlight=lru_cache#functools.lru_cache" title="lru_cache&#x7B97;&#x6CD5;&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;" target="_blank">lru_cache&#x7B97;&#x6CD5;&#x5B98;&#x65B9;&#x4E2D;&#x6587;&#x6587;&#x6863;</a></strong></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Characteristic.html" class="navigation navigation-prev " aria-label="Previous page: 语言特点">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Advanced.html" class="navigation navigation-next " aria-label="Next page: 高级特性">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"基础","level":"1.3","depth":1,"next":{"title":"高级特性","level":"1.4","depth":1,"path":"Advanced.md","ref":"Advanced.md","articles":[]},"previous":{"title":"语言特点","level":"1.2","depth":1,"path":"Characteristic.md","ref":"Characteristic.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Basic.md","mtime":"2019-09-05T08:11:27.835Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-05T08:20:28.778Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
